@@ -1,0 +1,26 @@
+{
+    "name": "ephraim-it/php7",
+	"description": "Simple Blog Api",
+	"type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
+    },
+    "require": {
+        "monolog/monolog": "1.25.1"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.6",
+        "peridot-php/peridot": "^1.19",
+        "peridot-php/leo": "^1.6",
+        "eloquent/phony-peridot": "^3.0"
+    },
+	"scripts": {
+   "test": [
+     "./vendor/squizlabs/php_codesniffer/bin/phpcs --standard=psr2 App/",
+     "./vendor/bin/peridot Test/"
+			]
+	 }
+
+}

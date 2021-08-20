@@ -1,0 +1,54 @@
+{
+    "name": "eloquent/phony",
+    "description": "Mocks, stubs, and spies for PHP.",
+    "keywords": ["mock", "mocking", "stub", "stubbing", "spy", "dummy", "double", "test", "fake"],
+    "homepage": "http://eloquent-software.com/phony/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Erin Millard",
+            "email": "ezzatron@gmail.com",
+            "homepage": "http://ezzatron.com/"
+        }
+    ],
+    "require": {
+        "php": ">=7.2"
+    },
+    "require-dev": {
+        "ext-pdo": "*",
+        "eloquent/code-style": "^1.0",
+        "eloquent/phpstan-phony": "^0.7",
+        "errors/exceptions": "^0.2",
+        "friendsofphp/php-cs-fixer": "^2",
+        "hamcrest/hamcrest-php": "^2",
+        "phpstan/extension-installer": "^1",
+        "phpstan/phpstan": "^0.12",
+        "phpstan/phpstan-phpunit": "^0.12",
+        "phpunit/phpunit": "^7 || ^8 <8.3.0 || ^8.3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Eloquent\\Phony\\": "src"
+        },
+        "files": [
+            "src/initialize.php",
+            "src/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Eloquent\\Phony\\": ["test/src"]
+        },
+        "files": [
+            "test/src/ClassA.php",
+            "test/src/object.php",
+            "test/src/Test/functions.php",
+            "test/src/TestClass.php"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "4.1.x-dev"
+        }
+    }
+}
