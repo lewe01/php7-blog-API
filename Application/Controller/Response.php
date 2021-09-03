@@ -1,20 +1,20 @@
 <?php
 
-namespace App\Lib;
+namespace Application\Controller;
 
 class Response
 {
-    private $status = 200;
+    private $p_status = 200;
 
-    public function status(int $code)
+    public function p_status(int $p_code)
     {
-        $this->status = $code;
+        $this->p_status = $p_code;
         return $this;
     }
     
     public function toJSON($data = [])
     {
-        http_response_code($this->status);
+        http_response_code($this->p_status);
         header('Content-Type: application/json');
         echo json_encode($data);
     }
